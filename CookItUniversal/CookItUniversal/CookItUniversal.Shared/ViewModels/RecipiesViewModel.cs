@@ -21,7 +21,6 @@ namespace CookItUniversal.ViewModels
     public class RecipiesViewModel : ViewModelBase
     {
         private ObservableCollection<RecipeViewModel> recipies;
-        private ICommand listClickCommand;
 
         public RecipiesViewModel()
         {

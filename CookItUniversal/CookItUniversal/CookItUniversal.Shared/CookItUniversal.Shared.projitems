@@ -32,6 +32,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)SQLiteController\SQLiteController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RecipeViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RecipiesViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SavedRecipiesViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Pages\" />

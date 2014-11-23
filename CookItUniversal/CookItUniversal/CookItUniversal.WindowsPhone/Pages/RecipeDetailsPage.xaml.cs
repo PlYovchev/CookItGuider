@@ -101,7 +101,6 @@ namespace CookItUniversal.Pages
         {
             RecipeViewModel recipeViewModel = e.Parameter as RecipeViewModel;
             this.DataContext = recipeViewModel;
-            recipeViewModel.mElement = this.videoElement;
             this.navigationHelper.OnNavigatedTo(e);
         }
 

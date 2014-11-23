@@ -38,8 +38,6 @@ namespace CookItUniversal.Pages
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
             this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
-
-            fromParse();
         }
 
         /// <summary>
@@ -113,13 +111,14 @@ namespace CookItUniversal.Pages
 
         #endregion
 
-        private async Task<IEnumerable<Recipe>> fromParse()
+        private void OnBrowseRecipiesClick(object sender, RoutedEventArgs e)
         {
-            int f = 6;
-            var recipies = await new ParseQuery<Recipe>().FindAsync();
-            var rec = recipies.ToList();
-            int b = 5;
-            return null;
+            this.Frame.Navigate(typeof(RecipiesPage), null);
+        }
+
+        private void OnBrowseSavedRecipiesClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SavedRecipiesPage), null);
         }
     }
 }

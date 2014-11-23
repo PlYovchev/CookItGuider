@@ -16,6 +16,8 @@ namespace CookItUniversal.Models
 
         public int Duration { get; set; }
 
-        public string imagePath { get; set; }
+        public string ImagePath { get; set; }
+
+        public string Type { get; set; }
     }
 }

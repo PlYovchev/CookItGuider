@@ -8,9 +8,13 @@ App.xbf
 CookItUniversal.WindowsPhone.xr.xml
 Pages\MainPage.xbf
 Pages\RecipeDetailsPage.xbf
+Pages\RecipeStepPage.xbf
 Pages\RecipiesPage.xbf
+Pages\SavedRecipeDetailsPage.xbf
+Pages\SavedRecipiesPage.xbf
 Views\CreateRecipeDep\CreateRecipeView.xbf
 Views\CreateRecipeDep\IngredientsListView.xbf
 Views\CreateRecipeDep\PreviewView.xbf
 Views\HeaderView.xbf
 Views\MainView.xbf
+Views\RecipeDetailsView.xbf

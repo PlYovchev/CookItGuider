@@ -46,6 +46,23 @@ namespace CookItUniversal.ViewModels
             }
         }
 
+        public static Expression<Func<DBRecipeModel, RecipeViewModel>> fromRecipeModelDB
+        {
+            get
+            {
+                return model => new RecipeViewModel()
+                {
+                    RecipeId = model.Id,
+                    Title = model.Title,
+                    Description = model.Description,
+                    Type = model.Type,
+                    Rating = model.Rating,
+                    Duration = model.Duration,
+                    ImageUri =  new Uri(model.ImagePath, UriKind.RelativeOrAbsolute)
+                };
+            }
+        }
+
         public string RecipeId { get; set; }
 
         public string Title { get; set; }
@@ -127,6 +144,19 @@ namespace CookItUniversal.ViewModels
             }
         }
 
+
+        public async Task LoadImageFromDb()
+        {
+            if (ImageUri == null)
+            {
+                return;
+            }
+
+            BitmapImage bmm = new BitmapImage();
+            bmm.UriSource = ImageUri;
+            ImageSource = bmm;
+        }
+
         public async void Save()
         {
             await SaveRecipeInDB();
@@ -177,7 +207,8 @@ namespace CookItUniversal.ViewModels
                 Description = this.Description,
                 Duration = this.Duration,
                 Rating = this.Rating,
-                imagePath = imagePath
+                ImagePath = imagePath,
+                Type = this.Type
             };
 
             DBRecipeModel recipeModelExists = await sqlController.FindItemById(recipeModel.Id);
