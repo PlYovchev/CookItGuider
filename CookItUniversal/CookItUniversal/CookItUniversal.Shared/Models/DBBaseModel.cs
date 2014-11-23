@@ -9,5 +9,7 @@ namespace CookItUniversal.Models
     {
         [PrimaryKey]
         public string Id { get; set; }
+
+        public string RecipeId { get; set; }
     }
 }

@@ -27,7 +27,6 @@ namespace CookItUniversal.ViewModels
         private ICommand saveClick;
         private byte[] imageStream;
         private string path;
-        public MediaElement mElement;
 
         public static Expression<Func<Recipe, RecipeViewModel>> fromRecipeModel
         {
@@ -273,7 +272,7 @@ namespace CookItUniversal.ViewModels
                 {
                     byte[] videoStream = await new HttpClient().GetByteArrayAsync(step.Video.Url);
                     videoPath = await SaveFileInStorage(this.RecipeId + "\\video" + step.StepNumber + ".mp4", videoStream);
-                    mElement.Source = new Uri(videoPath, UriKind.RelativeOrAbsolute);
+                 //   mElement.Source = new Uri(videoPath, UriKind.RelativeOrAbsolute);
                 }
 
                 DBStepModel stepModel = new DBStepModel
@@ -315,6 +314,16 @@ namespace CookItUniversal.ViewModels
             bmm.UriSource = new Uri(this.path, UriKind.RelativeOrAbsolute);
             ImageSource = bmm;
             // Data is now in myString
+        }
+
+        public async Task<IList<RecipeStepViewModel>> LoadSteps()
+        {
+            SQLiteController<DBStepModel> sqlController = new SQLiteController<DBStepModel>();
+
+            List<DBStepModel> list = await sqlController.FetchItemsByRecipeId(this.RecipeId) as List<DBStepModel>;
+            List<RecipeStepViewModel> stepsVM = list.AsQueryable().Select(RecipeStepViewModel.fromStepModelDB).ToList();
+
+            return stepsVM;
         }
     }
 }

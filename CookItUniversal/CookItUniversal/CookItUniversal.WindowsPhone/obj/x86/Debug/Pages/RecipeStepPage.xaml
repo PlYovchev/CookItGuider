@@ -36,14 +36,39 @@
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <MediaElement />
-            <Image Visibility="Collapsed"/>
+            <MediaElement Source="{Binding CurrentVideoUri,Mode=TwoWay}"
+                          Visibility="{Binding CurrentVideoVisibility,Mode=TwoWay}"
+                          Stretch="Fill"/>
+            <Image Source="{Binding CurrentStartImageUri,Mode=TwoWay}"
+                   Visibility="{Binding CurrentStartImageVisibility,Mode=TwoWay}"
+                   Stretch="Fill"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Stretch"
+                   />
             <Canvas Grid.Row="1"
-                    Width="150"
-                    Height="180"/>
-                <TextBlock Grid.Row="2"
-                           TextWrapping="Wrap"
-                           Style="{StaticResource DetailsTextBlock}"/>
+                    Height="180"
+                    Width="180"
+                    Margin="99,1.833,100.667,1.5">
+                <Path Stroke="Green" StrokeThickness="15">
+                    <Path.Data>
+                        <PathGeometry>
+                            <PathFigure StartPoint="{Binding StartPoint,Mode=TwoWay}">
+                                <ArcSegment Point="{Binding EndPoint,Mode=TwoWay}" 
+                                            Size="70,70"
+                                            IsLargeArc="{Binding IsLargeArc,Mode=TwoWay}" />
+                            </PathFigure>
+                        </PathGeometry>
+                    </Path.Data>
+                </Path>
+                <TextBlock Text="{Binding CurrentTimerText,Mode=TwoWay}"
+                           FontSize="32"
+                           Canvas.Left="50"
+                           Canvas.Top="75"/>
+            </Canvas>
+            <TextBlock Grid.Row="2"
+                       Text="{Binding CurrentDescription}"
+                       TextWrapping="Wrap"
+                       Style="{StaticResource DetailsTextBlock}"/>
         </Grid>
     </Grid>
 </Page>

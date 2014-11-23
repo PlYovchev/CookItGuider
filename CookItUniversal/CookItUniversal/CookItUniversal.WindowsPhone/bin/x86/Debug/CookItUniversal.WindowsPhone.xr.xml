@@ -11,6 +11,15 @@
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="ImageSource" />
     <RootPropertyPathName Name="SaveClick" />
+    <RootPropertyPathName Name="CurrentDescription" />
+    <RootPropertyPathName Name="CurrentTimerText" />
+    <RootPropertyPathName Name="StartPoint" />
+    <RootPropertyPathName Name="EndPoint" />
+    <RootPropertyPathName Name="IsLargeArc" />
+    <RootPropertyPathName Name="CurrentStartImageUri" />
+    <RootPropertyPathName Name="CurrentStartImageVisibility" />
+    <RootPropertyPathName Name="CurrentVideoUri" />
+    <RootPropertyPathName Name="CurrentVideoVisibility" />
     <RootPropertyPathName Name="Recipies" />
     <RootPropertyPathName Name="SavedRecipies" />
     <RootPropertyPathName Name="PageTitle" />
@@ -58,6 +67,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Path" />
+      <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
@@ -86,6 +96,8 @@
       <RootProperty Name="Stretch" />
       <RootProperty Name="Source" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Setter">
       <RootProperty Name="Property" />
@@ -123,10 +135,37 @@
     </RootType>
     <RootType FullName="CookItUniversal.Views.RecipeDetailsView" />
     <RootType FullName="CookItUniversal.Pages.RecipeDetailsPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.MediaElement" />
+    <RootType FullName="Windows.UI.Xaml.Controls.MediaElement">
+      <RootProperty Name="Source" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="Stretch" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
-      <RootProperty Name="Width" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Children" />
+      <RootMethod Name="GetLeft" />
+      <RootMethod Name="SetLeft" />
+      <RootMethod Name="GetTop" />
+      <RootMethod Name="SetTop" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Shapes.Path">
+      <RootProperty Name="Stroke" />
+      <RootProperty Name="StrokeThickness" />
+      <RootProperty Name="Data" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.PathGeometry">
+      <RootProperty Name="Figures" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.PathFigure">
+      <RootProperty Name="StartPoint" />
+      <RootProperty Name="Segments" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.ArcSegment">
+      <RootProperty Name="Point" />
+      <RootProperty Name="Size" />
+      <RootProperty Name="IsLargeArc" />
     </RootType>
     <RootType FullName="CookItUniversal.Pages.RecipeStepPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">

@@ -1,4 +1,5 @@
 ﻿using CookItUniversal.Common;
+using CookItUniversal.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -98,6 +99,10 @@ namespace CookItUniversal.Pages
         /// handlers that cannot cancel the navigation request.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            IList<RecipeStepViewModel> recipeSteps = e.Parameter as IList<RecipeStepViewModel>;
+            RecipeStepViewModel recipeStepsViewModel = new RecipeStepViewModel(recipeSteps);
+            this.DataContext = recipeStepsViewModel;
+
             this.navigationHelper.OnNavigatedTo(e);
         }
 

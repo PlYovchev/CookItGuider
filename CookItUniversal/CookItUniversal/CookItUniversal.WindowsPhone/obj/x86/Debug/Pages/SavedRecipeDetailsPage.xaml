@@ -41,8 +41,9 @@
             <AppBarButton x:ConnectionId='1' Label="Back" 
                           Icon="Back"
                                              />
-            <AppBarButton Label="Proceed to guide" 
-                          Icon="Play"/>
+            <AppBarButton x:ConnectionId='2' Label="Proceed to guide" 
+                          Icon="Play"
+                                                />
         </StackPanel>
     </Grid>
 </Page>

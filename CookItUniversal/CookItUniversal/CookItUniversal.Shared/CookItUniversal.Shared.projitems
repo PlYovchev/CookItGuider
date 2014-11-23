@@ -30,6 +30,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)SQLiteController\SQLite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SQLiteController\SQLiteAsync.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SQLiteController\SQLiteController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RecipeStepViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RecipeViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RecipiesViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SavedRecipiesViewModel.cs" />

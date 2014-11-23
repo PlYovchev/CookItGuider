@@ -67,6 +67,16 @@ namespace CookItUniversal.SQLiteController
             return result;
         }
 
+        public async Task<IList<T>> FetchItemsByRecipeId(string recipeId)
+        {
+            SQLiteAsyncConnection conn = new SQLiteAsyncConnection(dbName);
+
+            AsyncTableQuery<T> query = conn.Table<T>().Where(item => item.RecipeId == recipeId);
+            List<T> result = await query.ToListAsync();
+
+            return result;
+        }
+
         public async Task<T> FindItemById(string id)
         {
             SQLiteAsyncConnection conn = new SQLiteAsyncConnection(dbName);

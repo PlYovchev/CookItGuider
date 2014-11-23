@@ -115,5 +115,13 @@ namespace CookItUniversal.Pages
         {
             this.Frame.GoBack();
         }
+
+        private async void OnProceedClick(object sender, RoutedEventArgs e)
+        {
+            RecipeViewModel recipeVM = this.DataContext as RecipeViewModel;
+            IList<RecipeStepViewModel> recipeSteps = await recipeVM.LoadSteps();
+
+            this.Frame.Navigate(typeof(RecipeStepPage), recipeSteps);
+        }
     }
 }

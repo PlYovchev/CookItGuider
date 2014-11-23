@@ -42,7 +42,8 @@
                           Icon="Back"
                           Click="OnClickBack"/>
             <AppBarButton Label="Proceed to guide" 
-                          Icon="Play"/>
+                          Icon="Play"
+                          Click="OnProceedClick"/>
         </StackPanel>
     </Grid>
 </Page>

@@ -6,9 +6,6 @@ namespace CookItUniversal.Models
 {
     public class DBStepModel:DBBaseModel
     {
-
-        public string RecipeId { get; set; }
-
         public int StepNumber { get; set; }
 
         public string Description { get; set; }
