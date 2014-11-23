@@ -1,0 +1,113 @@
+﻿<Page
+    x:Class="CookItUniversal.Pages.RecipeDetailsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CookItUniversal.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:view="using:CookItUniversal.Views"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="75"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <view:HeaderView PageTitle="Recipe Details" />
+
+        <Grid Grid.Row="1" x:Name="ContentRoot">
+            <ScrollViewer HorizontalAlignment="Left" 
+                          Height="468" 
+                          VerticalAlignment="Top" 
+                          Width="400">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="250"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.ColumnSpan="2"
+                               Text="{Binding Title}"
+                               FontSize="26"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                    <Image Grid.Row="1"
+                           Grid.ColumnSpan="2"
+                           Source="{Binding ImageSource}"/>
+                    <Grid Grid.Row="2"
+                          Margin="0,15">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Type: "
+                                   Style="{StaticResource DetailsTextBlock}"/>
+                        <TextBlock Grid.Column="1"
+                                   Text="{Binding Type}"
+                                   Style="{StaticResource DetailsTextBlock}"/>
+                        <TextBlock Grid.Row="1"
+                                   Text="Duration: "
+                                   Style="{StaticResource DetailsTextBlock}"/>
+                        <TextBlock Grid.Column="1"
+                                   Grid.Row="1"
+                                   Text="{Binding Duration}"
+                                   Style="{StaticResource DetailsTextBlock}"/>
+                    </Grid>
+                    <ListView Grid.Row="2" 
+                              Grid.Column="1"
+                              ItemsSource="{Binding Ingredients}"
+                              ItemTemplate="{StaticResource IngredientsTemplate}"
+                              SelectionMode="None"/>
+                    <TextBlock Grid.Row="3" 
+                               Grid.ColumnSpan="2"
+                               Margin="15,15"
+                               TextWrapping="Wrap"
+                               Style="{StaticResource DetailsTextBlock}"
+                               Text="{Binding Description}"/>
+                    <MediaElement Name="videoElement"
+                                Grid.Row="4" 
+                                  Grid.ColumnSpan="2"
+                                  Width="100"
+                                  Height="100"/>
+                </Grid>
+
+            </ScrollViewer>
+        </Grid>
+
+        <StackPanel Grid.Row="2"
+                    Background="Cyan">
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="2"
+                    HorizontalAlignment="Center"
+                    Background="Cyan">
+            <AppBarButton Label="Back" 
+                          Icon="Back"
+                          Click="OnClickBack"/>
+            <AppBarButton Label="Save" 
+                          Icon="Save"
+                          Command="{Binding SaveClick}"/>
+        </StackPanel>
+    </Grid>
+</Page>

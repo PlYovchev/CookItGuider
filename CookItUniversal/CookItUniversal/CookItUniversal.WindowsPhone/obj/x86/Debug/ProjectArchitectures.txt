@@ -1,0 +1,1 @@
+C:\Users\plt3ch\Documents\visualstudio2013\Projects\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\CookItUniversal.WindowsPhone.csproj;x86

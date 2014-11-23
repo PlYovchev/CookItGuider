@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>9d685a8e-62cf-4b18-a58b-bb9bedbf4298</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>CookItUniversal</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\BytesToImageConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DBBaseModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DBIngredientsModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DBRecipeModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DBStepModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Ingredient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Recipe.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Step.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SQLiteController\SQLite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SQLiteController\SQLiteAsync.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SQLiteController\SQLiteController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RecipeViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RecipiesViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Pages\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
+  </ItemGroup>
+</Project>
