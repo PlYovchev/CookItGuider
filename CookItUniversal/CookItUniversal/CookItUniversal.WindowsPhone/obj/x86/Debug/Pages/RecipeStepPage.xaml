@@ -36,8 +36,13 @@
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <MediaElement Source="{Binding CurrentVideoUri,Mode=TwoWay}"
+            <MediaElement x:ConnectionId='1' Source="{Binding CurrentVideoUri,Mode=TwoWay}"
                           Visibility="{Binding CurrentVideoVisibility,Mode=TwoWay}"
+                          AutoPlay="False"
+                          ManipulationMode="All"
+                                                             
+                                                                  
+                                               
                           Stretch="Fill"/>
             <Image Source="{Binding CurrentStartImageUri,Mode=TwoWay}"
                    Visibility="{Binding CurrentStartImageVisibility,Mode=TwoWay}"

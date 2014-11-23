@@ -202,3 +202,11 @@ C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\Co
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Pages\RecipeStepPage.g.cs
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Pages\RecipeStepPage.xaml
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Pages\RecipeStepPage.xbf
+C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles
+C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles.intermediate
+C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles
+C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles.intermediate
+C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\pri.resfiles
+C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\pri.resfiles.intermediate
+C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\priconfig.xml
+C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\priconfig.xml.intermediate

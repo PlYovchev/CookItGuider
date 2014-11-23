@@ -2,6 +2,7 @@
 using CookItUniversal.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -112,5 +113,47 @@ namespace CookItUniversal.Pages
         }
 
         #endregion
+
+        private void MediaElement_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
+        {
+            MediaElement mediaElement = sender as MediaElement;
+            MediaElementState state = mediaElement.CurrentState;
+            if (mediaElement.CurrentState == MediaElementState.Stopped || mediaElement.CurrentState == MediaElementState.Paused)
+            {
+                mediaElement.Play();
+            }
+            else if (mediaElement.CurrentState == MediaElementState.Playing)
+            {
+                mediaElement.Pause();
+            }
+            
+        }
+
+        private void OnHoldEvent(object sender, HoldingRoutedEventArgs e)
+        {
+            MediaElement mediaElement = sender as MediaElement;
+            mediaElement.Stop();
+            mediaElement.Play();
+        }
+
+        private void OnSwipeListener(object sender, ManipulationDeltaRoutedEventArgs e)
+        {
+            if (!e.IsInertial)
+            {
+                MediaElement mediaElement = sender as MediaElement;
+
+                var delta = e.Delta.Translation;
+                if (delta.X > 0)
+                {
+                    mediaElement.Position += TimeSpan.FromMilliseconds(300);
+                }
+                else if (delta.X < 0)
+                {
+                    mediaElement.Position -= TimeSpan.FromMilliseconds(300);
+                }
+
+                Debug.WriteLine(((int)delta.X).ToString());
+            }
+        }
     }
 }

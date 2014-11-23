@@ -38,6 +38,11 @@
             </Grid.RowDefinitions>
             <MediaElement Source="{Binding CurrentVideoUri,Mode=TwoWay}"
                           Visibility="{Binding CurrentVideoVisibility,Mode=TwoWay}"
+                          AutoPlay="False"
+                          ManipulationMode="All"
+                          ManipulationDelta="OnSwipeListener"
+                          DoubleTapped="MediaElement_DoubleTapped"
+                          Holding="OnHoldEvent"
                           Stretch="Fill"/>
             <Image Source="{Binding CurrentStartImageUri,Mode=TwoWay}"
                    Visibility="{Binding CurrentStartImageVisibility,Mode=TwoWay}"

@@ -138,7 +138,12 @@
     <RootType FullName="Windows.UI.Xaml.Controls.MediaElement">
       <RootProperty Name="Source" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="AutoPlay" />
+      <RootProperty Name="ManipulationMode" />
       <RootProperty Name="Stretch" />
+      <RootEvent Name="ManipulationDelta" />
+      <RootEvent Name="DoubleTapped" />
+      <RootEvent Name="Holding" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
       <RootProperty Name="Height" />
