@@ -58,6 +58,6 @@
                            Style="{StaticResource DetailsTextBlock}"/>
             </StackPanel>
         </DataTemplate>
-        <converter:BytesToImageConverter x:Key="byteConverter" />
+        <converter:StepTitleConverter x:Key="StepTitleConverter"/>
     </Application.Resources>
 </Application>

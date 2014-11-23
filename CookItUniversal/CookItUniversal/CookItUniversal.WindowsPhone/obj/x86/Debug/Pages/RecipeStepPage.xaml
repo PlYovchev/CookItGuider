@@ -5,6 +5,7 @@
     xmlns:local="using:CookItUniversal.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:view="using:CookItUniversal.Views"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -17,26 +18,31 @@
         </Grid.ChildrenTransitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="85"/>
         </Grid.RowDefinitions>
 
         <!-- Title Panel -->
-        <StackPanel Grid.Row="0" Margin="19,0,0,0">
-            <TextBlock Text="MY APPLICATION" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
-        </StackPanel>
+        <TextBlock Text="{Binding CurrentStepNumber,Mode=TwoWay,Converter={StaticResource StepTitleConverter}}" 
+                       FontSize="28"
+                       Style="{ThemeResource HeaderTextBlockStyle}"
+                        HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
 
         <!--TODO: Content should be placed within the following grid-->
-        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,0,19,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition />
+                <RowDefinition Height="200"/>
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <MediaElement x:ConnectionId='1' Source="{Binding CurrentVideoUri,Mode=TwoWay}"
+            <Border BorderThickness="3"
+                 BorderBrush="#FF000000">
+                <MediaElement x:ConnectionId='2' Source="{Binding CurrentVideoUri,Mode=TwoWay}"
                           Visibility="{Binding CurrentVideoVisibility,Mode=TwoWay}"
                           AutoPlay="False"
                           ManipulationMode="All"
@@ -44,12 +50,16 @@
                                                                   
                                                
                           Stretch="Fill"/>
-            <Image Source="{Binding CurrentStartImageUri,Mode=TwoWay}"
+            </Border>
+            <Border BorderThickness="3"
+                 BorderBrush="#FF000000">
+                <Image Source="{Binding CurrentStartImageUri,Mode=TwoWay}"
                    Visibility="{Binding CurrentStartImageVisibility,Mode=TwoWay}"
                    Stretch="Fill"
                    HorizontalAlignment="Stretch"
                    VerticalAlignment="Stretch"
                    />
+            </Border>
             <Canvas Grid.Row="1"
                     Height="180"
                     Width="180"
@@ -59,7 +69,7 @@
                         <PathGeometry>
                             <PathFigure StartPoint="{Binding StartPoint,Mode=TwoWay}">
                                 <ArcSegment Point="{Binding EndPoint,Mode=TwoWay}" 
-                                            Size="70,70"
+                                            Size="50,50"
                                             IsLargeArc="{Binding IsLargeArc,Mode=TwoWay}" />
                             </PathFigure>
                         </PathGeometry>
@@ -67,7 +77,7 @@
                 </Path>
                 <TextBlock Text="{Binding CurrentTimerText,Mode=TwoWay}"
                            FontSize="32"
-                           Canvas.Left="50"
+                           Canvas.Left="70"
                            Canvas.Top="75"/>
             </Canvas>
             <TextBlock Grid.Row="2"
@@ -75,6 +85,25 @@
                        TextWrapping="Wrap"
                        Style="{StaticResource DetailsTextBlock}"/>
         </Grid>
+        <StackPanel Grid.Row="2"
+                    Background="Cyan">
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="2"
+                    HorizontalAlignment="Center"
+                    Background="Cyan">
+            <AppBarButton Label="Previous step" 
+                          Icon="Previous"
+                          Command="{Binding GoToPreviousStep}"
+                          IsEnabled="{Binding isPreviousButtonEnabled,Mode=TwoWay}"/>
+            <AppBarButton x:ConnectionId='1' Label="Dismiss the guider" 
+                          Icon="Cancel"
+                                                />
+            <AppBarButton Label="Next step" 
+                          Icon="Next"
+                          Command="{Binding GoToNextStep}"
+                          IsEnabled="{Binding isNextButtonEnabled,Mode=TwoWay}"/>
+        </StackPanel>
     </Grid>
 </Page>
 

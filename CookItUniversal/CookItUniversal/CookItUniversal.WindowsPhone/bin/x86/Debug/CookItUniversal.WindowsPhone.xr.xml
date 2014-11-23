@@ -11,6 +11,10 @@
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="ImageSource" />
     <RootPropertyPathName Name="SaveClick" />
+    <RootPropertyPathName Name="GoToNextStep" />
+    <RootPropertyPathName Name="isNextButtonEnabled" />
+    <RootPropertyPathName Name="GoToPreviousStep" />
+    <RootPropertyPathName Name="isPreviousButtonEnabled" />
     <RootPropertyPathName Name="CurrentDescription" />
     <RootPropertyPathName Name="CurrentTimerText" />
     <RootPropertyPathName Name="StartPoint" />
@@ -20,6 +24,7 @@
     <RootPropertyPathName Name="CurrentStartImageVisibility" />
     <RootPropertyPathName Name="CurrentVideoUri" />
     <RootPropertyPathName Name="CurrentVideoVisibility" />
+    <RootPropertyPathName Name="CurrentStepNumber" />
     <RootPropertyPathName Name="Recipies" />
     <RootPropertyPathName Name="SavedRecipies" />
     <RootPropertyPathName Name="PageTitle" />
@@ -57,7 +62,7 @@
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
-    <RootType FullName="CookItUniversal.Converters.BytesToImageConverter" />
+    <RootType FullName="CookItUniversal.Converters.StepTitleConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Orientation" />
       <RootProperty Name="Children" />
@@ -68,6 +73,7 @@
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Path" />
       <RootProperty Name="Mode" />
+      <RootProperty Name="Converter" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
@@ -129,21 +135,16 @@
       <RootProperty Name="Label" />
       <RootProperty Name="Icon" />
       <RootProperty Name="Command" />
-      <RootProperty Name="Name" />
       <RootProperty Name="IsEnabled" />
+      <RootProperty Name="Name" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="CookItUniversal.Views.RecipeDetailsView" />
     <RootType FullName="CookItUniversal.Pages.RecipeDetailsPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.MediaElement">
-      <RootProperty Name="Source" />
-      <RootProperty Name="Visibility" />
-      <RootProperty Name="AutoPlay" />
-      <RootProperty Name="ManipulationMode" />
-      <RootProperty Name="Stretch" />
-      <RootEvent Name="ManipulationDelta" />
-      <RootEvent Name="DoubleTapped" />
-      <RootEvent Name="Holding" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Border">
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Child" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
       <RootProperty Name="Height" />
@@ -171,6 +172,16 @@
       <RootProperty Name="Point" />
       <RootProperty Name="Size" />
       <RootProperty Name="IsLargeArc" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.MediaElement">
+      <RootProperty Name="Source" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="AutoPlay" />
+      <RootProperty Name="ManipulationMode" />
+      <RootProperty Name="Stretch" />
+      <RootEvent Name="ManipulationDelta" />
+      <RootEvent Name="DoubleTapped" />
+      <RootEvent Name="Holding" />
     </RootType>
     <RootType FullName="CookItUniversal.Pages.RecipeStepPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">

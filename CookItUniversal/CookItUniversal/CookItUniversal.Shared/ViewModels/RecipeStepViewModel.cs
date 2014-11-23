@@ -7,6 +7,8 @@ using System.Linq.Expressions;
 using System.Text;
 using Windows.UI.Xaml;
 using Windows.Foundation;
+using System.Windows.Input;
+using GalaSoft.MvvmLight.Command;
 
 namespace CookItUniversal.ViewModels
 {
@@ -22,6 +24,14 @@ namespace CookItUniversal.ViewModels
         private Point startPoint;
         private Point endPoint;
         private bool isLargeArc;
+        private int currentStepIndex;
+        private bool nextButtonEnabled;
+        private bool previousButtonEnabled;
+        private ICommand goToNextStep;
+        private ICommand goToPreviousStep;
+        private DispatcherTimer timer;
+        private int currentStepNumber;
+
         public static Expression<Func<DBStepModel, RecipeStepViewModel>> fromStepModelDB
         {
             get
@@ -41,7 +51,18 @@ namespace CookItUniversal.ViewModels
 
         public string RecipeId { get; set; }
 
-        public int CurrentStepNumber { get; set; }
+        public int CurrentStepNumber 
+        {
+            get
+            {
+                return this.currentStepNumber;
+            }
+            set
+            {
+                this.currentStepNumber = value;
+                this.RaisePropertyChanged(() => this.CurrentStepNumber);
+            }
+        }
 
         public string CurrentDescription
         {
@@ -80,7 +101,10 @@ namespace CookItUniversal.ViewModels
             set
             {
                 this.currentStartImageUri = value;
-                RaisePropertyChanged(() => this.CurrentStartImageUri);
+                if (this.CurrentStartImageUri != null && this.CurrentStartImageUri.OriginalString != "")
+                {
+                    RaisePropertyChanged(() => this.CurrentStartImageUri);
+                }
             }
         }
 
@@ -119,7 +143,10 @@ namespace CookItUniversal.ViewModels
             set
             {
                 this.currentVideoUri = value;
-                RaisePropertyChanged(() => this.CurrentVideoUri);
+                if (this.CurrentVideoUri != null && this.CurrentVideoUri.OriginalString != "")
+                {
+                    RaisePropertyChanged(() => this.CurrentVideoUri);
+                }
             }
         }
 
@@ -175,6 +202,58 @@ namespace CookItUniversal.ViewModels
             }
         }
 
+        public bool isNextButtonEnabled
+        {
+            get
+            {
+                return this.nextButtonEnabled;
+            }
+            set
+            {
+                this.nextButtonEnabled = value;
+                this.RaisePropertyChanged(() => this.isNextButtonEnabled);
+            }
+        }
+
+        public bool isPreviousButtonEnabled
+        {
+            get
+            {
+                return this.previousButtonEnabled;
+            }
+            set
+            {
+                this.previousButtonEnabled = value;
+                this.RaisePropertyChanged(() => this.isPreviousButtonEnabled);
+            }
+        }
+
+        public ICommand GoToNextStep
+        {
+            get
+            {
+                if (this.goToNextStep == null)
+                {
+                    this.goToNextStep = new RelayCommand(LoadNextStep);
+                }
+
+                return this.goToNextStep;
+            }
+        }
+
+        public ICommand GoToPreviousStep
+        {
+            get
+            {
+                if (this.goToPreviousStep == null)
+                {
+                    this.goToPreviousStep = new RelayCommand(LoadPreviousStep);
+                }
+
+                return this.goToPreviousStep;
+            }
+        }
+
         public IList<RecipeStepViewModel> RecipeSteps { get; set; }
 
         public RecipeStepViewModel()
@@ -185,14 +264,56 @@ namespace CookItUniversal.ViewModels
         public RecipeStepViewModel(IList<RecipeStepViewModel> recipeSteps)
         {
             this.RecipeSteps = recipeSteps;
+            
             if (this.RecipeSteps != null && this.RecipeSteps.Count > 0)
             {
-                SetCurrentStep(this.RecipeSteps.AsQueryable().Where(step => step.CurrentStepNumber == 2).FirstOrDefault());
+                this.currentStepIndex = 1;
+
+                CallStepProperties();
             }
         }
 
-        private void SetCurrentStep(RecipeStepViewModel recipeStep)
+        private void CallStepProperties()
         {
+            if (this.timer != null)
+            {
+                this.timer.Stop();
+            }
+
+            SetCurrentStep();
+
+            StartTimer();
+
+            SetStepButtonsEnability();
+        }
+
+        private void SetStepButtonsEnability()
+        {
+            if (this.currentStepIndex == 1)
+            {
+                this.isPreviousButtonEnabled = false;
+            }
+            else
+            {
+                this.isPreviousButtonEnabled = true;
+            }
+
+            if (this.CurrentTimer != -1)
+            {
+                this.isNextButtonEnabled = true;
+            }
+            else
+            {
+                this.isNextButtonEnabled = false; 
+            }
+        }
+
+        private void SetCurrentStep()
+        {
+            RecipeStepViewModel recipeStep = this.RecipeSteps.AsQueryable()
+                                                                 .Where(step => step.CurrentStepNumber == this.currentStepIndex)
+                                                                 .FirstOrDefault();
+
              this.CurrentDescription = recipeStep.CurrentDescription;
              this.CurrentTimer = recipeStep.CurrentTimer;
              this.CurrentStartImageUri = recipeStep.CurrentStartImageUri;
@@ -205,7 +326,7 @@ namespace CookItUniversal.ViewModels
                  this.CurrentVideoVisibility = Visibility.Visible;
                  this.CurrentStartImageVisibility = Visibility.Collapsed;
              }
-             else if (this.CurrentStartImageUri !=null && this.CurrentStartImageUri.OriginalString != "")
+             else if (this.CurrentStartImageUri != null && this.CurrentStartImageUri.OriginalString != "")
              {
                  this.CurrentVideoVisibility = Visibility.Collapsed;
                  this.CurrentStartImageVisibility = Visibility.Visible;
@@ -215,8 +336,6 @@ namespace CookItUniversal.ViewModels
                  this.CurrentVideoVisibility = Visibility.Collapsed;
                  this.CurrentStartImageVisibility = Visibility.Collapsed;
              }
-
-             StartTimer();
         }
 
         private void StartTimer()
@@ -227,18 +346,19 @@ namespace CookItUniversal.ViewModels
             Point endPointInitial = new Point(150,91);
             this.EndPoint = endPointInitial;
 
-            int fullTimeSum = 1 * 60;
+            int fullTimeSum = this.CurrentTimer * 60;
             double singleAngle = 360d / (double)fullTimeSum;
 
             //////////
-            float startValue = (float)1;
+            float startValue = (float)this.CurrentTimer;
             this.CurrentTimerText = startValue.ToString("0.00");
 
             double currentAngle = singleAngle;
 
-            var timer = new DispatcherTimer();
-            timer.Tick += (obj, args) =>
+            this.timer = new DispatcherTimer();
+            this.timer.Tick += (obj, args) =>
             {
+                startValue -= 0.01f;
                 if (startValue <= 0f)
                 {
                     timer.Stop();
@@ -246,9 +366,9 @@ namespace CookItUniversal.ViewModels
                     this.CurrentTimerText = startValue.ToString("0.00");
                     return;
                 }
-                startValue -= 0.01f;
+
                 float flootStart = (float)Math.Floor(startValue);
-                if (startValue - flootStart > 0.60f)
+                if (startValue - flootStart > 0.60f && startValue - flootStart < 1.00f)
                 {
                     startValue -= 0.40f;
                 }
@@ -256,9 +376,9 @@ namespace CookItUniversal.ViewModels
                 this.CurrentTimerText = startValue.ToString("0.00");
 
                 //Arc animation
-                double y = Math.Sin((Math.PI / 180) * currentAngle) * 70;
-                double x = Math.Cos((Math.PI / 180) * currentAngle) * 70;
-                Point newEndPoint = new Point(80 + x, 90 + y);
+                double y = Math.Sin((Math.PI / 180) * currentAngle) * 50;
+                double x = Math.Cos((Math.PI / 180) * currentAngle) * 50;
+                Point newEndPoint = new Point(100 + x, 90 + y);
                 this.EndPoint = newEndPoint;
                 currentAngle += singleAngle;
                 if (currentAngle > 180)
@@ -267,8 +387,28 @@ namespace CookItUniversal.ViewModels
                 }
             };
 
-            timer.Interval = TimeSpan.FromSeconds(1);
-            timer.Start();
+            this.timer.Interval = TimeSpan.FromSeconds(1);
+            this.timer.Start();
+        }
+
+        private void LoadNextStep()
+        {
+            if (this.isNextButtonEnabled)
+            {
+                this.currentStepIndex++;
+
+                CallStepProperties();
+            }
+        }
+
+        private void LoadPreviousStep()
+        {
+            if (this.isPreviousButtonEnabled)
+            {
+                this.currentStepIndex--;
+
+                CallStepProperties();
+            }
         }
     }
 }

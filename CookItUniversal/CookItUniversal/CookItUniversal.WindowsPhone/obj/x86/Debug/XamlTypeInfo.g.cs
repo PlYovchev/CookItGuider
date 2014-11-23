@@ -125,7 +125,7 @@ namespace CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo
         private void InitTypeTables()
         {
             _typeNameTable = new string[20];
-            _typeNameTable[0] = "CookItUniversal.Converters.BytesToImageConverter";
+            _typeNameTable[0] = "CookItUniversal.Converters.StepTitleConverter";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "CookItUniversal.Views.HeaderView";
             _typeNameTable[3] = "Windows.UI.Xaml.Controls.UserControl";
@@ -147,7 +147,7 @@ namespace CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo
             _typeNameTable[19] = "CookItUniversal.Views.MainView";
 
             _typeTable = new global::System.Type[20];
-            _typeTable[0] = typeof(global::CookItUniversal.Converters.BytesToImageConverter);
+            _typeTable[0] = typeof(global::CookItUniversal.Converters.StepTitleConverter);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::CookItUniversal.Views.HeaderView);
             _typeTable[3] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -201,7 +201,7 @@ namespace CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_BytesToImageConverter() { return new global::CookItUniversal.Converters.BytesToImageConverter(); }
+        private object Activate_0_StepTitleConverter() { return new global::CookItUniversal.Converters.StepTitleConverter(); }
         private object Activate_2_HeaderView() { return new global::CookItUniversal.Views.HeaderView(); }
         private object Activate_5_MainPage() { return new global::CookItUniversal.Pages.MainPage(); }
         private object Activate_9_ObservableDictionary() { return new global::CookItUniversal.Common.ObservableDictionary(); }
@@ -233,9 +233,9 @@ namespace CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  CookItUniversal.Converters.BytesToImageConverter
+            case 0:   //  CookItUniversal.Converters.StepTitleConverter
                 userType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_0_BytesToImageConverter;
+                userType.Activator = Activate_0_StepTitleConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

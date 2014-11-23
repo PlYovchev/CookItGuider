@@ -19,7 +19,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Converters\BytesToImageConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\StepTitleConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DBBaseModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DBIngredientsModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DBRecipeModel.cs" />

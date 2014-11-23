@@ -118,7 +118,7 @@ namespace CookItUniversal.Pages
         {
             MediaElement mediaElement = sender as MediaElement;
             MediaElementState state = mediaElement.CurrentState;
-            if (mediaElement.CurrentState == MediaElementState.Stopped || mediaElement.CurrentState == MediaElementState.Paused)
+            if (mediaElement.CurrentState == MediaElementState.Paused)
             {
                 mediaElement.Play();
             }
@@ -154,6 +154,11 @@ namespace CookItUniversal.Pages
 
                 Debug.WriteLine(((int)delta.X).ToString());
             }
+        }
+
+        private void OnDismissClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
         }
     }
 }
