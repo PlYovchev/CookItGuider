@@ -102,7 +102,6 @@ C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\Co
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\bin\x86\Debug\Views\CreateRecipeDep\IngredientsListView.xbf
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\bin\x86\Debug\Views\CreateRecipeDep\PreviewView.xbf
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\bin\x86\Debug\Views\HeaderView.xbf
-C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\bin\x86\Debug\Views\MainView.xbf
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\bin\x86\Debug\CookItUniversal.WindowsPhone.xr.xml
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\bin\x86\Debug\CookItUniversal.WindowsPhone.exe
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\bin\x86\Debug\CookItUniversal.WindowsPhone.pdb
@@ -141,8 +140,6 @@ C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\Co
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Views\CreateRecipeDep\PreviewView.g.cs
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Views\HeaderView.g.i.cs
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Views\HeaderView.g.cs
-C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Views\MainView.g.i.cs
-C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Views\MainView.g.cs
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\XamlTypeInfo.g.cs
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\App.xaml
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Pages\MainPage.xaml
@@ -152,7 +149,6 @@ C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\Co
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Views\CreateRecipeDep\IngredientsListView.xaml
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Views\CreateRecipeDep\PreviewView.xaml
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Views\HeaderView.xaml
-C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Views\MainView.xaml
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\App.xbf
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Pages\MainPage.xbf
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Pages\RecipeDetailsPage.xbf
@@ -161,7 +157,6 @@ C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\Co
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Views\CreateRecipeDep\IngredientsListView.xbf
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Views\CreateRecipeDep\PreviewView.xbf
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Views\HeaderView.xbf
-C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\Views\MainView.xbf
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\XamlSaveStateFile.xml
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\CookItUniversal.WindowsPhone.exe
 C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\obj\x86\Debug\CookItUniversal.WindowsPhone.pdb

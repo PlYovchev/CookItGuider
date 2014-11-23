@@ -1,0 +1,1 @@
+C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\CookItUniversal.Windows.csproj;x86

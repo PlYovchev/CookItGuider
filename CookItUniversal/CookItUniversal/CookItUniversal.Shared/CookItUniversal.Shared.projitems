@@ -27,6 +27,24 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Ingredient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Recipe.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Step.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\RecipeDetailsPage.xaml.cs">
+      <DependentUpon>RecipeDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\RecipeStepPage.xaml.cs">
+      <DependentUpon>RecipeStepPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\RecipiesPage.xaml.cs">
+      <DependentUpon>RecipiesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\SavedRecipeDetailsPage.xaml.cs">
+      <DependentUpon>SavedRecipeDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\SavedRecipiesPage.xaml.cs">
+      <DependentUpon>SavedRecipiesPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SQLiteController\SQLite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SQLiteController\SQLiteAsync.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SQLiteController\SQLiteController.cs" />
@@ -34,9 +52,45 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RecipeViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RecipiesViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SavedRecipiesViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\HeaderView.xaml.cs">
+      <DependentUpon>HeaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\RecipeDetailsView.xaml.cs">
+      <DependentUpon>RecipeDetailsView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Pages\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
+    <Page Include="$(MSBuildThisFileDirectory)Pages\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Pages\RecipeDetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Pages\RecipeStepPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Pages\RecipiesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Pages\SavedRecipeDetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Pages\SavedRecipiesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\HeaderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\RecipeDetailsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>

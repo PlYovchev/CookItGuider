@@ -16,5 +16,4 @@ Views\CreateRecipeDep\CreateRecipeView.xbf
 Views\CreateRecipeDep\IngredientsListView.xbf
 Views\CreateRecipeDep\PreviewView.xbf
 Views\HeaderView.xbf
-Views\MainView.xbf
 Views\RecipeDetailsView.xbf

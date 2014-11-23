@@ -85,6 +85,12 @@
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\bin\x86\Debug\Pages\SavedRecipiesPage.xbf">
       <PackagePath>Pages\SavedRecipiesPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\bin\x86\Debug\Views\HeaderView.xbf">
+      <PackagePath>Views\HeaderView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\bin\x86\Debug\Views\RecipeDetailsView.xbf">
+      <PackagePath>Views\RecipeDetailsView.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\bin\x86\Debug\Views\CreateRecipeDep\CreateRecipeView.xbf">
       <PackagePath>Views\CreateRecipeDep\CreateRecipeView.xbf</PackagePath>
     </AppxPackagedFile>
@@ -93,15 +99,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\bin\x86\Debug\Views\CreateRecipeDep\PreviewView.xbf">
       <PackagePath>Views\CreateRecipeDep\PreviewView.xbf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\bin\x86\Debug\Views\HeaderView.xbf">
-      <PackagePath>Views\HeaderView.xbf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\bin\x86\Debug\Views\MainView.xbf">
-      <PackagePath>Views\MainView.xbf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\bin\x86\Debug\Views\RecipeDetailsView.xbf">
-      <PackagePath>Views\RecipeDetailsView.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.WindowsPhone\bin\x86\Debug\CookItUniversal.WindowsPhone.xr.xml">
       <PackagePath>CookItUniversal.WindowsPhone.xr.xml</PackagePath>

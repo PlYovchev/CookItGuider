@@ -80,24 +80,6 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Pages\MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\RecipeDetailsPage.xaml.cs">
-      <DependentUpon>RecipeDetailsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\RecipeStepPage.xaml.cs">
-      <DependentUpon>RecipeStepPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\RecipiesPage.xaml.cs">
-      <DependentUpon>RecipiesPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\SavedRecipeDetailsPage.xaml.cs">
-      <DependentUpon>SavedRecipeDetailsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\SavedRecipiesPage.xaml.cs">
-      <DependentUpon>SavedRecipiesPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\CreateRecipeDep\CreateRecipeView.xaml.cs">
       <DependentUpon>CreateRecipeView.xaml</DependentUpon>
     </Compile>
@@ -107,15 +89,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\CreateRecipeDep\PreviewView.xaml.cs">
       <DependentUpon>PreviewView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\HeaderView.xaml.cs">
-      <DependentUpon>HeaderView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MainView.xaml.cs">
-      <DependentUpon>MainView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\RecipeDetailsView.xaml.cs">
-      <DependentUpon>RecipeDetailsView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -132,30 +105,6 @@
     <Content Include="Assets\WideLogo.scale-240.png" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Pages\MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\RecipeDetailsPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\RecipeStepPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\RecipiesPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Pages\SavedRecipeDetailsPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\SavedRecipiesPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\CreateRecipeDep\CreateRecipeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -165,18 +114,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CreateRecipeDep\PreviewView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\HeaderView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\MainView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\RecipeDetailsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -211,6 +148,9 @@
     <SDKReference Include="SQLite.WP81, Version=3.8.7.2">
       <Name>SQLite for Windows Phone 8.1</Name>
     </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
