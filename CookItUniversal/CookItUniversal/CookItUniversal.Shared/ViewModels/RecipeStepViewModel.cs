@@ -9,6 +9,9 @@ using Windows.UI.Xaml;
 using Windows.Foundation;
 using System.Windows.Input;
 using GalaSoft.MvvmLight.Command;
+using Windows.Devices.Sensors;
+using System.Diagnostics;
+using Windows.UI.Core;
 
 namespace CookItUniversal.ViewModels
 {
@@ -27,10 +30,12 @@ namespace CookItUniversal.ViewModels
         private int currentStepIndex;
         private bool nextButtonEnabled;
         private bool previousButtonEnabled;
+        private bool playAlarm = false;
         private ICommand goToNextStep;
         private ICommand goToPreviousStep;
         private DispatcherTimer timer;
         private int currentStepNumber;
+
 
         public static Expression<Func<DBStepModel, RecipeStepViewModel>> fromStepModelDB
         {
@@ -202,6 +207,19 @@ namespace CookItUniversal.ViewModels
             }
         }
 
+        public bool PlayAlarm
+        {
+            get
+            {
+                return this.playAlarm;
+            }
+            set
+            {
+                this.playAlarm = value;
+                this.RaisePropertyChanged(() => this.PlayAlarm);
+            }
+        }
+
         public bool isNextButtonEnabled
         {
             get
@@ -354,44 +372,47 @@ namespace CookItUniversal.ViewModels
             this.CurrentTimerText = startValue.ToString("0.00");
 
             double currentAngle = singleAngle;
-
-            this.timer = new DispatcherTimer();
-            this.timer.Tick += (obj, args) =>
+            if (this.CurrentTimer > 0)
             {
-                startValue -= 0.01f;
-                if (startValue <= 0f)
+                this.timer = new DispatcherTimer();
+                this.timer.Tick += (obj, args) =>
                 {
-                    timer.Stop();
-                    startValue = 0.00f;
+                    startValue -= 0.01f;
+                    if (startValue <= 0f)
+                    {
+                        timer.Stop();
+                        startValue = 0.00f;
+                        this.CurrentTimerText = startValue.ToString("0.00");
+                        this.PlayAlarm = true;
+                        return;
+                    }
+
+                    float flootStart = (float)Math.Floor(startValue);
+                    if (startValue - flootStart > 0.60f && startValue - flootStart < 1.00f)
+                    {
+                        startValue -= 0.40f;
+                    }
+
                     this.CurrentTimerText = startValue.ToString("0.00");
-                    return;
-                }
 
-                float flootStart = (float)Math.Floor(startValue);
-                if (startValue - flootStart > 0.60f && startValue - flootStart < 1.00f)
-                {
-                    startValue -= 0.40f;
-                }
+                    //Arc animation
+                    double y = Math.Sin((Math.PI / 180) * currentAngle) * 50;
+                    double x = Math.Cos((Math.PI / 180) * currentAngle) * 50;
+                    Point newEndPoint = new Point(100 + x, 90 + y);
+                    this.EndPoint = newEndPoint;
+                    currentAngle += singleAngle;
+                    if (currentAngle > 180)
+                    {
+                        this.IsLargeArc = false;
+                    }
+                };
 
-                this.CurrentTimerText = startValue.ToString("0.00");
-
-                //Arc animation
-                double y = Math.Sin((Math.PI / 180) * currentAngle) * 50;
-                double x = Math.Cos((Math.PI / 180) * currentAngle) * 50;
-                Point newEndPoint = new Point(100 + x, 90 + y);
-                this.EndPoint = newEndPoint;
-                currentAngle += singleAngle;
-                if (currentAngle > 180)
-                {
-                    this.IsLargeArc = false;
-                }
-            };
-
-            this.timer.Interval = TimeSpan.FromSeconds(1);
-            this.timer.Start();
+                this.timer.Interval = TimeSpan.FromSeconds(1);
+                this.timer.Start();
+            }
         }
 
-        private void LoadNextStep()
+        public void LoadNextStep()
         {
             if (this.isNextButtonEnabled)
             {
@@ -401,7 +422,7 @@ namespace CookItUniversal.ViewModels
             }
         }
 
-        private void LoadPreviousStep()
+        public void LoadPreviousStep()
         {
             if (this.isPreviousButtonEnabled)
             {

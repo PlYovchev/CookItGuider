@@ -26,7 +26,9 @@ namespace CookItUniversal.ViewModels
         private ObservableCollection<Ingredient> ingredients;
         private ICommand saveClick;
         private byte[] imageStream;
-        private string path;
+        private bool isInitializing;
+        private bool isEnabled;
+        private ICommand dismissNotification;
 
         public static Expression<Func<Recipe, RecipeViewModel>> fromRecipeModel
         {
@@ -74,6 +76,45 @@ namespace CookItUniversal.ViewModels
         public int Duration { get; set; }
 
         public Uri ImageUri { get; set; }
+
+        public bool IsInitializing
+        {
+            get
+            {
+                return this.isInitializing;
+            }
+            set
+            {
+                this.isInitializing = value;
+                this.RaisePropertyChanged(() => this.IsInitializing);
+            }
+        }
+
+        public bool IsEnabled
+        {
+            get
+            {
+                return this.isEnabled;
+            }
+            set
+            {
+                this.isEnabled = value;
+                this.RaisePropertyChanged(() => this.IsEnabled);
+            }
+        }
+
+        public ICommand DismissNotification
+        {
+            get
+            {
+                if (this.dismissNotification == null)
+                {
+                    this.dismissNotification = new RelayCommand(this.OnDismissNotification);
+                }
+
+                return this.dismissNotification;
+            }
+        }
 
         public BitmapImage ImageSource
         {
@@ -158,17 +199,22 @@ namespace CookItUniversal.ViewModels
 
         public async void Save()
         {
+            this.IsInitializing = true;
+            this.IsEnabled = true;
+
             await SaveRecipeInDB();
             await SaveIngredientsInDB();
             await SaveStepsInDB();
 
-            SQLiteController<DBRecipeModel> sqlController = new SQLiteController<DBRecipeModel>();
-            SQLiteController<DBIngredientsModel> sqlController2 = new SQLiteController<DBIngredientsModel>();
-            SQLiteController<DBStepModel> sqlController3 = new SQLiteController<DBStepModel>();
+            this.IsInitializing = false;
 
-            List<DBRecipeModel> list = await sqlController.FetchItems() as List<DBRecipeModel>;
-            List<DBIngredientsModel> list2 = await sqlController2.FetchItems() as List<DBIngredientsModel>;
-            List<DBStepModel> list3 = await sqlController3.FetchItems() as List<DBStepModel>;
+            //SQLiteController<DBRecipeModel> sqlController = new SQLiteController<DBRecipeModel>();
+            //SQLiteController<DBIngredientsModel> sqlController2 = new SQLiteController<DBIngredientsModel>();
+            //SQLiteController<DBStepModel> sqlController3 = new SQLiteController<DBStepModel>();
+
+            //List<DBRecipeModel> list = await sqlController.FetchItems() as List<DBRecipeModel>;
+            //List<DBIngredientsModel> list2 = await sqlController2.FetchItems() as List<DBIngredientsModel>;
+            //List<DBStepModel> list3 = await sqlController3.FetchItems() as List<DBStepModel>;
         }
 
         private async Task<string> SaveFileInStorage(string fileName, byte[] stream)
@@ -295,26 +341,26 @@ namespace CookItUniversal.ViewModels
             }
         }
         
-        public async void LoadData()
-        {
-            Stream myString;
-            Windows.Storage.StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+        //public async void LoadData()
+        //{
+        //    Stream myString;
+        //    Windows.Storage.StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
 
-            try
-            {
-                StorageFile sampleFile = await localFolder.GetFileAsync(this.RecipeId + "\\reviewImage.jpg");
-                //myString = await FileIO.ReadBufferAsync(sampleFile);
-            }
+        //    try
+        //    {
+        //        StorageFile sampleFile = await localFolder.GetFileAsync(this.RecipeId + "\\reviewImage.jpg");
+        //        //myString = await FileIO.ReadBufferAsync(sampleFile);
+        //    }
             
-            catch (Exception)
-            {
-                // No file to load or error loading it
-            }
-            BitmapImage bmm = new BitmapImage();
-            bmm.UriSource = new Uri(this.path, UriKind.RelativeOrAbsolute);
-            ImageSource = bmm;
-            // Data is now in myString
-        }
+        //    catch (Exception)
+        //    {
+        //        // No file to load or error loading it
+        //    }
+        //    BitmapImage bmm = new BitmapImage();
+        //    bmm.UriSource = new Uri(this.path, UriKind.RelativeOrAbsolute);
+        //    ImageSource = bmm;
+        //    // Data is now in myString
+        //}
 
         public async Task<IList<RecipeStepViewModel>> LoadSteps()
         {
@@ -324,6 +370,11 @@ namespace CookItUniversal.ViewModels
             List<RecipeStepViewModel> stepsVM = list.AsQueryable().Select(RecipeStepViewModel.fromStepModelDB).ToList();
 
             return stepsVM;
+        }
+
+        public void OnDismissNotification()
+        {
+            this.IsEnabled = false;
         }
     }
 }

@@ -6,9 +6,11 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Devices.Sensors;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics.Display;
+using Windows.UI.Core;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -29,6 +31,7 @@ namespace CookItUniversal.Pages
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        private bool isDeviceShaken;
 
         public RecipeStepPage()
         {
@@ -37,6 +40,50 @@ namespace CookItUniversal.Pages
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
             this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
+
+            //this.Accelerometer.Shaken += (snd, args) =>
+            //{
+            //    Debug.WriteLine("shaken");
+            //    this.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            //    {
+            //        isDeviceShaken = true;
+            //    });
+                
+            //};
+
+            this.Accelerometer = Accelerometer.GetDefault();
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Tick += (obj, args) =>
+            {
+                isDeviceShaken = true;
+            };
+            timer.Interval = TimeSpan.FromSeconds(5);
+            timer.Start();
+
+            this.Accelerometer.ReadingChanged += (snd, args) =>
+            {
+                if (isDeviceShaken)
+                {
+                    var x = args.Reading.AccelerationX;
+                    var y = args.Reading.AccelerationY;
+                    if ((y > -0.2 && y < 0.2) && (x > 0.8))
+                    {
+                        this.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+                        {
+                            ((RecipeStepViewModel)this.DataContext).LoadNextStep();
+                            isDeviceShaken = false;
+                        });
+                    }
+                    else if ((y > -0.2 && y < 0.2) && (x < -0.8))
+                    {
+                        this.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+                        {
+                            ((RecipeStepViewModel)this.DataContext).LoadPreviousStep();
+                            isDeviceShaken = false;
+                        });
+                    }
+                }
+            };
         }
 
         /// <summary>
@@ -160,5 +207,7 @@ namespace CookItUniversal.Pages
         {
             this.Frame.GoBack();
         }
+
+        public Accelerometer Accelerometer { get; set; }
     }
 }

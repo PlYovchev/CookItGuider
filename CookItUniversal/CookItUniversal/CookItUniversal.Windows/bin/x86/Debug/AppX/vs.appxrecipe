@@ -26,7 +26,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\CookItUniversal.Windows.exe">
       <PackagePath>CookItUniversal.Windows.exe</PackagePath>
-      <Modified>2014-11-23T22:52:22.047</Modified>
+      <Modified>2014-11-23T23:15:27.166</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\packages\MvvmLightLibs.5.0.2.0\lib\netcore451\GalaSoft.MvvmLight.dll">
       <PackagePath>GalaSoft.MvvmLight.dll</PackagePath>
@@ -82,27 +82,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\Pages\MainPage.xbf">
       <PackagePath>Pages\MainPage.xbf</PackagePath>
-      <Modified>2014-11-23T22:52:21.776</Modified>
+      <Modified>2014-11-23T23:15:26.809</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\Pages\RecipeDetailsPage.xbf">
       <PackagePath>Pages\RecipeDetailsPage.xbf</PackagePath>
-      <Modified>2014-11-23T22:52:21.778</Modified>
+      <Modified>2014-11-23T23:15:26.811</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\Pages\RecipeStepPage.xbf">
       <PackagePath>Pages\RecipeStepPage.xbf</PackagePath>
-      <Modified>2014-11-23T22:11:24.363</Modified>
+      <Modified>2014-11-23T23:15:26.811</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\Pages\RecipiesPage.xbf">
       <PackagePath>Pages\RecipiesPage.xbf</PackagePath>
-      <Modified>2014-11-23T22:52:21.778</Modified>
+      <Modified>2014-11-23T23:15:26.812</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\Pages\SavedRecipeDetailsPage.xbf">
       <PackagePath>Pages\SavedRecipeDetailsPage.xbf</PackagePath>
-      <Modified>2014-11-23T22:52:21.778</Modified>
+      <Modified>2014-11-23T23:15:26.814</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\Pages\SavedRecipiesPage.xbf">
       <PackagePath>Pages\SavedRecipiesPage.xbf</PackagePath>
-      <Modified>2014-11-23T22:11:24.368</Modified>
+      <Modified>2014-11-23T23:15:26.814</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\Views\HeaderView.xbf">
       <PackagePath>Views\HeaderView.xbf</PackagePath>
@@ -114,11 +114,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\CookItUniversal.Windows.xr.xml">
       <PackagePath>CookItUniversal.Windows.xr.xml</PackagePath>
-      <Modified>2014-11-23T22:51:44.767</Modified>
+      <Modified>2014-11-23T23:15:26.788</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-11-23T22:52:22.158</Modified>
+      <Modified>2014-11-23T23:15:27.320</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -33,6 +33,7 @@
     <Capability Name="internetClientServer" />
     <Capability Name="picturesLibrary" />
     <Capability Name="videosLibrary" />
+    <Capability Name="musicLibrary" />
   </Capabilities>
   <Dependencies>
     <PackageDependency Name="Microsoft.VCLibs.120.00.Phone.Debug" MinVersion="12.0.30113.0" />

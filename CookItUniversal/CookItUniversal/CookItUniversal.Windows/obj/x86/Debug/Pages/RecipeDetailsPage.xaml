@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:view="using:CookItUniversal.Views"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="DarkCyan">
 
     <Grid x:Name="LayoutRoot">
 
@@ -31,7 +31,7 @@
                    VerticalAlignment="Center"
                    HorizontalOffset="-100"
                    VerticalOffset="-100"
-                   IsOpen="False"
+                   IsOpen="True"
                    x:Name="StandardPopup">
                 <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
@@ -42,9 +42,10 @@
                                    TextAlignment="Center"
                                    FontSize="24.667" 
                                    HorizontalAlignment="Center" />
-                        <ProgressRing IsActive="True"/>
+                        <ProgressRing IsActive="{Binding IsInitializing}"
+                                      Name="DownloadProgressRing"/>
                         <Button Content="Ok" 
-                                IsEnabled="False" 
+                                IsEnabled="{Binding ElementName=DownloadProgressRing,Path=!IsActive}" 
                                 HorizontalAlignment="Center" />
                     </StackPanel>
                 </Border>

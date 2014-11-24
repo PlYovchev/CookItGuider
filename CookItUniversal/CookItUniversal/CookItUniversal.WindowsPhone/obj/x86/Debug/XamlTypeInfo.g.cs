@@ -124,47 +124,55 @@ namespace CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[19];
+            _typeNameTable = new string[23];
             _typeNameTable[0] = "CookItUniversal.Converters.StepTitleConverter";
             _typeNameTable[1] = "Object";
-            _typeNameTable[2] = "CookItUniversal.Views.CreateRecipeView";
-            _typeNameTable[3] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[4] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[5] = "CookItUniversal.Common.NavigationHelper";
-            _typeNameTable[6] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[7] = "CookItUniversal.Common.ObservableDictionary";
-            _typeNameTable[8] = "String";
-            _typeNameTable[9] = "CookItUniversal.Views.IngredientsListView";
-            _typeNameTable[10] = "CookItUniversal.Views.PreviewView";
-            _typeNameTable[11] = "CookItUniversal.Views.HeaderView";
-            _typeNameTable[12] = "CookItUniversal.Pages.MainPage";
-            _typeNameTable[13] = "CookItUniversal.Views.RecipeDetailsView";
-            _typeNameTable[14] = "CookItUniversal.Pages.RecipeDetailsPage";
-            _typeNameTable[15] = "CookItUniversal.Pages.RecipeStepPage";
-            _typeNameTable[16] = "CookItUniversal.Pages.RecipiesPage";
-            _typeNameTable[17] = "CookItUniversal.Pages.SavedRecipeDetailsPage";
-            _typeNameTable[18] = "CookItUniversal.Pages.SavedRecipiesPage";
+            _typeNameTable[2] = "CookItUniversal.Converters.XORConverter";
+            _typeNameTable[3] = "CookItUniversal.Views.CreateRecipeView";
+            _typeNameTable[4] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[5] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[6] = "CookItUniversal.Common.NavigationHelper";
+            _typeNameTable[7] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[8] = "CookItUniversal.Common.ObservableDictionary";
+            _typeNameTable[9] = "String";
+            _typeNameTable[10] = "CookItUniversal.Views.IngredientsListView";
+            _typeNameTable[11] = "CookItUniversal.Views.PreviewView";
+            _typeNameTable[12] = "CookItUniversal.Views.HeaderView";
+            _typeNameTable[13] = "CookItUniversal.Pages.MainPage";
+            _typeNameTable[14] = "CookItUniversal.Views.RecipeDetailsView";
+            _typeNameTable[15] = "CookItUniversal.Pages.RecipeDetailsPage";
+            _typeNameTable[16] = "CookItUniversal.AttachedProperties.AttachedProperty";
+            _typeNameTable[17] = "Boolean";
+            _typeNameTable[18] = "CookItUniversal.Pages.RecipeStepPage";
+            _typeNameTable[19] = "Windows.Devices.Sensors.Accelerometer";
+            _typeNameTable[20] = "CookItUniversal.Pages.RecipiesPage";
+            _typeNameTable[21] = "CookItUniversal.Pages.SavedRecipeDetailsPage";
+            _typeNameTable[22] = "CookItUniversal.Pages.SavedRecipiesPage";
 
-            _typeTable = new global::System.Type[19];
+            _typeTable = new global::System.Type[23];
             _typeTable[0] = typeof(global::CookItUniversal.Converters.StepTitleConverter);
             _typeTable[1] = typeof(global::System.Object);
-            _typeTable[2] = typeof(global::CookItUniversal.Views.CreateRecipeView);
-            _typeTable[3] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[5] = typeof(global::CookItUniversal.Common.NavigationHelper);
-            _typeTable[6] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[7] = typeof(global::CookItUniversal.Common.ObservableDictionary);
-            _typeTable[8] = typeof(global::System.String);
-            _typeTable[9] = typeof(global::CookItUniversal.Views.IngredientsListView);
-            _typeTable[10] = typeof(global::CookItUniversal.Views.PreviewView);
-            _typeTable[11] = typeof(global::CookItUniversal.Views.HeaderView);
-            _typeTable[12] = typeof(global::CookItUniversal.Pages.MainPage);
-            _typeTable[13] = typeof(global::CookItUniversal.Views.RecipeDetailsView);
-            _typeTable[14] = typeof(global::CookItUniversal.Pages.RecipeDetailsPage);
-            _typeTable[15] = typeof(global::CookItUniversal.Pages.RecipeStepPage);
-            _typeTable[16] = typeof(global::CookItUniversal.Pages.RecipiesPage);
-            _typeTable[17] = typeof(global::CookItUniversal.Pages.SavedRecipeDetailsPage);
-            _typeTable[18] = typeof(global::CookItUniversal.Pages.SavedRecipiesPage);
+            _typeTable[2] = typeof(global::CookItUniversal.Converters.XORConverter);
+            _typeTable[3] = typeof(global::CookItUniversal.Views.CreateRecipeView);
+            _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[6] = typeof(global::CookItUniversal.Common.NavigationHelper);
+            _typeTable[7] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[8] = typeof(global::CookItUniversal.Common.ObservableDictionary);
+            _typeTable[9] = typeof(global::System.String);
+            _typeTable[10] = typeof(global::CookItUniversal.Views.IngredientsListView);
+            _typeTable[11] = typeof(global::CookItUniversal.Views.PreviewView);
+            _typeTable[12] = typeof(global::CookItUniversal.Views.HeaderView);
+            _typeTable[13] = typeof(global::CookItUniversal.Pages.MainPage);
+            _typeTable[14] = typeof(global::CookItUniversal.Views.RecipeDetailsView);
+            _typeTable[15] = typeof(global::CookItUniversal.Pages.RecipeDetailsPage);
+            _typeTable[16] = typeof(global::CookItUniversal.AttachedProperties.AttachedProperty);
+            _typeTable[17] = typeof(global::System.Boolean);
+            _typeTable[18] = typeof(global::CookItUniversal.Pages.RecipeStepPage);
+            _typeTable[19] = typeof(global::Windows.Devices.Sensors.Accelerometer);
+            _typeTable[20] = typeof(global::CookItUniversal.Pages.RecipiesPage);
+            _typeTable[21] = typeof(global::CookItUniversal.Pages.SavedRecipeDetailsPage);
+            _typeTable[22] = typeof(global::CookItUniversal.Pages.SavedRecipiesPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -200,19 +208,21 @@ namespace CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo
         }
 
         private object Activate_0_StepTitleConverter() { return new global::CookItUniversal.Converters.StepTitleConverter(); }
-        private object Activate_2_CreateRecipeView() { return new global::CookItUniversal.Views.CreateRecipeView(); }
-        private object Activate_7_ObservableDictionary() { return new global::CookItUniversal.Common.ObservableDictionary(); }
-        private object Activate_9_IngredientsListView() { return new global::CookItUniversal.Views.IngredientsListView(); }
-        private object Activate_10_PreviewView() { return new global::CookItUniversal.Views.PreviewView(); }
-        private object Activate_11_HeaderView() { return new global::CookItUniversal.Views.HeaderView(); }
-        private object Activate_12_MainPage() { return new global::CookItUniversal.Pages.MainPage(); }
-        private object Activate_13_RecipeDetailsView() { return new global::CookItUniversal.Views.RecipeDetailsView(); }
-        private object Activate_14_RecipeDetailsPage() { return new global::CookItUniversal.Pages.RecipeDetailsPage(); }
-        private object Activate_15_RecipeStepPage() { return new global::CookItUniversal.Pages.RecipeStepPage(); }
-        private object Activate_16_RecipiesPage() { return new global::CookItUniversal.Pages.RecipiesPage(); }
-        private object Activate_17_SavedRecipeDetailsPage() { return new global::CookItUniversal.Pages.SavedRecipeDetailsPage(); }
-        private object Activate_18_SavedRecipiesPage() { return new global::CookItUniversal.Pages.SavedRecipiesPage(); }
-        private void MapAdd_7_ObservableDictionary(object instance, object key, object item)
+        private object Activate_2_XORConverter() { return new global::CookItUniversal.Converters.XORConverter(); }
+        private object Activate_3_CreateRecipeView() { return new global::CookItUniversal.Views.CreateRecipeView(); }
+        private object Activate_8_ObservableDictionary() { return new global::CookItUniversal.Common.ObservableDictionary(); }
+        private object Activate_10_IngredientsListView() { return new global::CookItUniversal.Views.IngredientsListView(); }
+        private object Activate_11_PreviewView() { return new global::CookItUniversal.Views.PreviewView(); }
+        private object Activate_12_HeaderView() { return new global::CookItUniversal.Views.HeaderView(); }
+        private object Activate_13_MainPage() { return new global::CookItUniversal.Pages.MainPage(); }
+        private object Activate_14_RecipeDetailsView() { return new global::CookItUniversal.Views.RecipeDetailsView(); }
+        private object Activate_15_RecipeDetailsPage() { return new global::CookItUniversal.Pages.RecipeDetailsPage(); }
+        private object Activate_16_AttachedProperty() { return new global::CookItUniversal.AttachedProperties.AttachedProperty(); }
+        private object Activate_18_RecipeStepPage() { return new global::CookItUniversal.Pages.RecipeStepPage(); }
+        private object Activate_20_RecipiesPage() { return new global::CookItUniversal.Pages.RecipiesPage(); }
+        private object Activate_21_SavedRecipeDetailsPage() { return new global::CookItUniversal.Pages.SavedRecipeDetailsPage(); }
+        private object Activate_22_SavedRecipiesPage() { return new global::CookItUniversal.Pages.SavedRecipiesPage(); }
+        private void MapAdd_8_ObservableDictionary(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
             var newKey = (global::System.String)key;
@@ -241,127 +251,153 @@ namespace CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo
                 xamlType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  CookItUniversal.Views.CreateRecipeView
+            case 2:   //  CookItUniversal.Converters.XORConverter
+                userType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_2_XORConverter;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 3:   //  CookItUniversal.Views.CreateRecipeView
                 userType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_2_CreateRecipeView;
+                userType.Activator = Activate_3_CreateRecipeView;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 3:   //  Windows.UI.Xaml.Controls.Page
+            case 4:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 4:   //  Windows.UI.Xaml.Controls.UserControl
+            case 5:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 5:   //  CookItUniversal.Common.NavigationHelper
+            case 6:   //  CookItUniversal.Common.NavigationHelper
                 userType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  Windows.UI.Xaml.DependencyObject
+            case 7:   //  Windows.UI.Xaml.DependencyObject
                 xamlType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 7:   //  CookItUniversal.Common.ObservableDictionary
+            case 8:   //  CookItUniversal.Common.ObservableDictionary
                 userType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.DictionaryAdd = MapAdd_7_ObservableDictionary;
+                userType.DictionaryAdd = MapAdd_8_ObservableDictionary;
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  String
+            case 9:   //  String
                 xamlType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 9:   //  CookItUniversal.Views.IngredientsListView
+            case 10:   //  CookItUniversal.Views.IngredientsListView
                 userType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_IngredientsListView;
+                userType.Activator = Activate_10_IngredientsListView;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  CookItUniversal.Views.PreviewView
+            case 11:   //  CookItUniversal.Views.PreviewView
                 userType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_PreviewView;
+                userType.Activator = Activate_11_PreviewView;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  CookItUniversal.Views.HeaderView
+            case 12:   //  CookItUniversal.Views.HeaderView
                 userType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_11_HeaderView;
+                userType.Activator = Activate_12_HeaderView;
                 userType.AddMemberName("PageTitle");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  CookItUniversal.Pages.MainPage
+            case 13:   //  CookItUniversal.Pages.MainPage
                 userType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_MainPage;
+                userType.Activator = Activate_13_MainPage;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  CookItUniversal.Views.RecipeDetailsView
+            case 14:   //  CookItUniversal.Views.RecipeDetailsView
                 userType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_13_RecipeDetailsView;
+                userType.Activator = Activate_14_RecipeDetailsView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  CookItUniversal.Pages.RecipeDetailsPage
+            case 15:   //  CookItUniversal.Pages.RecipeDetailsPage
                 userType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_14_RecipeDetailsPage;
+                userType.Activator = Activate_15_RecipeDetailsPage;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  CookItUniversal.Pages.RecipeStepPage
+            case 16:   //  CookItUniversal.AttachedProperties.AttachedProperty
+                userType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_16_AttachedProperty;
+                userType.AddMemberName("PlaySound");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 17:   //  Boolean
+                xamlType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 18:   //  CookItUniversal.Pages.RecipeStepPage
                 userType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_15_RecipeStepPage;
+                userType.Activator = Activate_18_RecipeStepPage;
+                userType.AddMemberName("NavigationHelper");
+                userType.AddMemberName("DefaultViewModel");
+                userType.AddMemberName("Accelerometer");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 19:   //  Windows.Devices.Sensors.Accelerometer
+                userType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 20:   //  CookItUniversal.Pages.RecipiesPage
+                userType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_20_RecipiesPage;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 16:   //  CookItUniversal.Pages.RecipiesPage
+            case 21:   //  CookItUniversal.Pages.SavedRecipeDetailsPage
                 userType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_16_RecipiesPage;
+                userType.Activator = Activate_21_SavedRecipeDetailsPage;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 17:   //  CookItUniversal.Pages.SavedRecipeDetailsPage
+            case 22:   //  CookItUniversal.Pages.SavedRecipiesPage
                 userType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_17_SavedRecipeDetailsPage;
-                userType.AddMemberName("NavigationHelper");
-                userType.AddMemberName("DefaultViewModel");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 18:   //  CookItUniversal.Pages.SavedRecipiesPage
-                userType = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_18_SavedRecipiesPage;
+                userType.Activator = Activate_22_SavedRecipiesPage;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
@@ -432,42 +468,60 @@ namespace CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo
             var that = (global::CookItUniversal.Pages.RecipeDetailsPage)instance;
             return that.DefaultViewModel;
         }
-        private object get_11_RecipeStepPage_NavigationHelper(object instance)
+        private object get_11_AttachedProperty_PlaySound(object instance)
+        {
+            return global::CookItUniversal.AttachedProperties.AttachedProperty.GetPlaySound((global::Windows.UI.Xaml.DependencyObject)instance);
+        }
+        private void set_11_AttachedProperty_PlaySound(object instance, object Value)
+        {
+            global::CookItUniversal.AttachedProperties.AttachedProperty.SetPlaySound((global::Windows.UI.Xaml.DependencyObject)instance, (global::System.Boolean)Value);
+        }
+        private object get_12_RecipeStepPage_NavigationHelper(object instance)
         {
             var that = (global::CookItUniversal.Pages.RecipeStepPage)instance;
             return that.NavigationHelper;
         }
-        private object get_12_RecipeStepPage_DefaultViewModel(object instance)
+        private object get_13_RecipeStepPage_DefaultViewModel(object instance)
         {
             var that = (global::CookItUniversal.Pages.RecipeStepPage)instance;
             return that.DefaultViewModel;
         }
-        private object get_13_RecipiesPage_NavigationHelper(object instance)
+        private object get_14_RecipeStepPage_Accelerometer(object instance)
+        {
+            var that = (global::CookItUniversal.Pages.RecipeStepPage)instance;
+            return that.Accelerometer;
+        }
+        private void set_14_RecipeStepPage_Accelerometer(object instance, object Value)
+        {
+            var that = (global::CookItUniversal.Pages.RecipeStepPage)instance;
+            that.Accelerometer = (global::Windows.Devices.Sensors.Accelerometer)Value;
+        }
+        private object get_15_RecipiesPage_NavigationHelper(object instance)
         {
             var that = (global::CookItUniversal.Pages.RecipiesPage)instance;
             return that.NavigationHelper;
         }
-        private object get_14_RecipiesPage_DefaultViewModel(object instance)
+        private object get_16_RecipiesPage_DefaultViewModel(object instance)
         {
             var that = (global::CookItUniversal.Pages.RecipiesPage)instance;
             return that.DefaultViewModel;
         }
-        private object get_15_SavedRecipeDetailsPage_NavigationHelper(object instance)
+        private object get_17_SavedRecipeDetailsPage_NavigationHelper(object instance)
         {
             var that = (global::CookItUniversal.Pages.SavedRecipeDetailsPage)instance;
             return that.NavigationHelper;
         }
-        private object get_16_SavedRecipeDetailsPage_DefaultViewModel(object instance)
+        private object get_18_SavedRecipeDetailsPage_DefaultViewModel(object instance)
         {
             var that = (global::CookItUniversal.Pages.SavedRecipeDetailsPage)instance;
             return that.DefaultViewModel;
         }
-        private object get_17_SavedRecipiesPage_NavigationHelper(object instance)
+        private object get_19_SavedRecipiesPage_NavigationHelper(object instance)
         {
             var that = (global::CookItUniversal.Pages.SavedRecipiesPage)instance;
             return that.NavigationHelper;
         }
-        private object get_18_SavedRecipiesPage_DefaultViewModel(object instance)
+        private object get_20_SavedRecipiesPage_DefaultViewModel(object instance)
         {
             var that = (global::CookItUniversal.Pages.SavedRecipiesPage)instance;
             return that.DefaultViewModel;
@@ -547,52 +601,66 @@ namespace CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo
                 xamlMember.Getter = get_10_RecipeDetailsPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "CookItUniversal.AttachedProperties.AttachedProperty.PlaySound":
+                userType = (global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CookItUniversal.AttachedProperties.AttachedProperty");
+                xamlMember = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlMember(this, "PlaySound", "Boolean");
+                xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
+                xamlMember.SetIsAttachable();
+                xamlMember.Getter = get_11_AttachedProperty_PlaySound;
+                xamlMember.Setter = set_11_AttachedProperty_PlaySound;
+                break;
             case "CookItUniversal.Pages.RecipeStepPage.NavigationHelper":
                 userType = (global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CookItUniversal.Pages.RecipeStepPage");
                 xamlMember = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlMember(this, "NavigationHelper", "CookItUniversal.Common.NavigationHelper");
-                xamlMember.Getter = get_11_RecipeStepPage_NavigationHelper;
+                xamlMember.Getter = get_12_RecipeStepPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "CookItUniversal.Pages.RecipeStepPage.DefaultViewModel":
                 userType = (global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CookItUniversal.Pages.RecipeStepPage");
                 xamlMember = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "CookItUniversal.Common.ObservableDictionary");
-                xamlMember.Getter = get_12_RecipeStepPage_DefaultViewModel;
+                xamlMember.Getter = get_13_RecipeStepPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
+                break;
+            case "CookItUniversal.Pages.RecipeStepPage.Accelerometer":
+                userType = (global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CookItUniversal.Pages.RecipeStepPage");
+                xamlMember = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlMember(this, "Accelerometer", "Windows.Devices.Sensors.Accelerometer");
+                xamlMember.Getter = get_14_RecipeStepPage_Accelerometer;
+                xamlMember.Setter = set_14_RecipeStepPage_Accelerometer;
                 break;
             case "CookItUniversal.Pages.RecipiesPage.NavigationHelper":
                 userType = (global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CookItUniversal.Pages.RecipiesPage");
                 xamlMember = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlMember(this, "NavigationHelper", "CookItUniversal.Common.NavigationHelper");
-                xamlMember.Getter = get_13_RecipiesPage_NavigationHelper;
+                xamlMember.Getter = get_15_RecipiesPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "CookItUniversal.Pages.RecipiesPage.DefaultViewModel":
                 userType = (global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CookItUniversal.Pages.RecipiesPage");
                 xamlMember = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "CookItUniversal.Common.ObservableDictionary");
-                xamlMember.Getter = get_14_RecipiesPage_DefaultViewModel;
+                xamlMember.Getter = get_16_RecipiesPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "CookItUniversal.Pages.SavedRecipeDetailsPage.NavigationHelper":
                 userType = (global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CookItUniversal.Pages.SavedRecipeDetailsPage");
                 xamlMember = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlMember(this, "NavigationHelper", "CookItUniversal.Common.NavigationHelper");
-                xamlMember.Getter = get_15_SavedRecipeDetailsPage_NavigationHelper;
+                xamlMember.Getter = get_17_SavedRecipeDetailsPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "CookItUniversal.Pages.SavedRecipeDetailsPage.DefaultViewModel":
                 userType = (global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CookItUniversal.Pages.SavedRecipeDetailsPage");
                 xamlMember = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "CookItUniversal.Common.ObservableDictionary");
-                xamlMember.Getter = get_16_SavedRecipeDetailsPage_DefaultViewModel;
+                xamlMember.Getter = get_18_SavedRecipeDetailsPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "CookItUniversal.Pages.SavedRecipiesPage.NavigationHelper":
                 userType = (global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CookItUniversal.Pages.SavedRecipiesPage");
                 xamlMember = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlMember(this, "NavigationHelper", "CookItUniversal.Common.NavigationHelper");
-                xamlMember.Getter = get_17_SavedRecipiesPage_NavigationHelper;
+                xamlMember.Getter = get_19_SavedRecipiesPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "CookItUniversal.Pages.SavedRecipiesPage.DefaultViewModel":
                 userType = (global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CookItUniversal.Pages.SavedRecipiesPage");
                 xamlMember = new global::CookItUniversal.CookItUniversal_WindowsPhone_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "CookItUniversal.Common.ObservableDictionary");
-                xamlMember.Getter = get_18_SavedRecipiesPage_DefaultViewModel;
+                xamlMember.Getter = get_20_SavedRecipiesPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             }

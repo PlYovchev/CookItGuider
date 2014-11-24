@@ -11,6 +11,8 @@
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="ImageSource" />
     <RootPropertyPathName Name="SaveClick" />
+    <RootPropertyPathName Name="!IsActive" />
+    <RootPropertyPathName Name="IsInitializing" />
     <RootPropertyPathName Name="GoToNextStep" />
     <RootPropertyPathName Name="isNextButtonEnabled" />
     <RootPropertyPathName Name="GoToPreviousStep" />
@@ -68,6 +70,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Path" />
+      <RootProperty Name="ElementName" />
       <RootProperty Name="Mode" />
       <RootProperty Name="Converter" />
     </RootType>
@@ -109,7 +112,6 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.EntranceThemeTransition" />
     <RootType FullName="CookItUniversal.Views.HeaderView">
@@ -151,6 +153,7 @@
       <RootProperty Name="Child" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
+      <RootProperty Name="Name" />
       <RootProperty Name="IsActive" />
     </RootType>
     <RootType FullName="CookItUniversal.Pages.RecipeDetailsPage" />
@@ -191,6 +194,7 @@
       <RootEvent Name="DoubleTapped" />
       <RootEvent Name="Holding" />
     </RootType>
+    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="CookItUniversal.Pages.RecipeStepPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Name" />

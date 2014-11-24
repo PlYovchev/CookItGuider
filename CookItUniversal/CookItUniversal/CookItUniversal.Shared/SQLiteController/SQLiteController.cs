@@ -86,5 +86,19 @@ namespace CookItUniversal.SQLiteController
 
             return result;
         }
+
+        public async Task DeleteItemsAsync(string recipeId)
+        {
+            SQLiteAsyncConnection conn = new SQLiteAsyncConnection(dbName);
+
+            var items = await conn.Table<T>().Where(x => x.Id == recipeId || x.RecipeId == recipeId).ToListAsync();
+            if (items != null && items.Count>0)
+            {
+                foreach (var item in items)
+                {
+                    await conn.DeleteAsync(item);
+                }                
+            }
+        }
     }
 }

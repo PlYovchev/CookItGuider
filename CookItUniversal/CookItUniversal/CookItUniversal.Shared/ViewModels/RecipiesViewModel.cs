@@ -1,4 +1,5 @@
 ﻿using CookItUniversal.Models;
+using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight;
 using Parse;
 using System;
@@ -14,17 +15,48 @@ using System.IO;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Media;
 using System.Windows.Input;
-using GalaSoft.MvvmLight.Command;
+using Windows.Networking.Connectivity;
+using Windows.UI.Popups;
+
 
 namespace CookItUniversal.ViewModels
 {
     public class RecipiesViewModel : ViewModelBase
     {
         private ObservableCollection<RecipeViewModel> recipies;
+        private bool isInitializing;
 
         public RecipiesViewModel()
         {
-            LoadRecipies();
+            
+            ConnectionProfile connectionProfile = NetworkInformation.GetInternetConnectionProfile();
+            if (connectionProfile != null && connectionProfile.GetNetworkConnectivityLevel() == NetworkConnectivityLevel.InternetAccess)
+            {
+                LoadRecipies();
+            }
+            else
+            {
+                ShowNoInternetConnectionMessage();
+            }
+        }
+
+        private async void ShowNoInternetConnectionMessage()
+        {
+            var messageDialog = new MessageDialog("No internet connection has been found.");
+            await messageDialog.ShowAsync();
+        }
+
+        public bool IsInitializing
+        {
+            get
+            {
+                return this.isInitializing;
+            }
+            set
+            {
+                this.isInitializing = value;
+                this.RaisePropertyChanged(() => this.IsInitializing);
+            }
         }
 
         public IEnumerable<RecipeViewModel> Recipies
@@ -55,6 +87,7 @@ namespace CookItUniversal.ViewModels
 
         private async Task LoadRecipies()
         {
+            this.IsInitializing = true;
             var recipiesFromParse = await new ParseQuery<Recipe>().FindAsync();
             var recipiesVM = recipiesFromParse.AsQueryable().Select(RecipeViewModel.fromRecipeModel).ToList();
             foreach (var recipe in recipiesVM)
@@ -68,6 +101,7 @@ namespace CookItUniversal.ViewModels
             }
 
             this.Recipies = recipiesVM;
+            this.IsInitializing = false;
         }
     }
 }

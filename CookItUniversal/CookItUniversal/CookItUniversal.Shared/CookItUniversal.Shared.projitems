@@ -15,11 +15,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)AttachedProperties\AttachedProperty.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\StepTitleConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\XORConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DBBaseModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DBIngredientsModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DBRecipeModel.cs" />
@@ -92,5 +94,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Sounds\School_Fire_Alarm-Cullen_Card-202875844.mp3" />
+    <Content Include="$(MSBuildThisFileDirectory)Sounds\sonnette_reveil.wav" />
   </ItemGroup>
 </Project>

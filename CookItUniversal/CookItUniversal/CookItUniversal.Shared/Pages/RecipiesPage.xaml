@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:view="using:CookItUniversal.Views"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="DarkCyan">
 
     <Grid x:Name="LayoutRoot">
 
@@ -28,7 +28,7 @@
 
         <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" x:Name="ContentRoot">
-            <ProgressRing IsActive="True"/>
+            <ProgressRing IsActive="{Binding IsInitializing}"/>
             <ListView Name="RecipeListView"
                       ItemsSource="{Binding Recipies}"
                       ItemTemplate="{StaticResource RecipeTemplate}"

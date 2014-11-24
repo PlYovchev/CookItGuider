@@ -6,8 +6,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:view="using:CookItUniversal.Views"
+    xmlns:ap="using:CookItUniversal.AttachedProperties" 
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="DarkCyan">
 
     <Grid x:Name="LayoutRoot">
 
@@ -80,10 +81,18 @@
                            Canvas.Left="70"
                            Canvas.Top="75"/>
             </Canvas>
+            <MediaElement x:Name="music"
+                          AutoPlay="False"  
+                          Source="/Sounds/sonnette_reveil.wav"
+                          ap:AttachedProperty.PlaySound = "{Binding Path=PlayAlarm,Mode=TwoWay,TargetNullValue=False,FallbackValue=False}"
+                          Width="0"
+                          Height="0"
+                         />
             <TextBlock Grid.Row="2"
                        Text="{Binding CurrentDescription}"
                        TextWrapping="Wrap"
                        Style="{StaticResource DetailsTextBlock}"/>
+            
         </Grid>
         <StackPanel Grid.Row="2"
                     Background="Cyan">
