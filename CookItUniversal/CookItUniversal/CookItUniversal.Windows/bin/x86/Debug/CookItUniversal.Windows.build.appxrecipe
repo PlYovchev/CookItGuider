@@ -56,6 +56,18 @@
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\Assets\School_Fire_Alarm-Cullen_Card-202875844.mp3">
+      <PackagePath>Assets\School_Fire_Alarm-Cullen_Card-202875844.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Shared\Sounds\School_Fire_Alarm-Cullen_Card-202875844.mp3">
+      <PackagePath>Sounds\School_Fire_Alarm-Cullen_Card-202875844.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\Assets\sonnette_reveil.wav">
+      <PackagePath>Assets\sonnette_reveil.wav</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Shared\Sounds\sonnette_reveil.wav">
+      <PackagePath>Sounds\sonnette_reveil.wav</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>

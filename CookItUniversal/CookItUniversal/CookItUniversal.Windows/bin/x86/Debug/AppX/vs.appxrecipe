@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-11-23T22:33:02.113</Modified>
+      <Modified>2014-11-24T09:58:11.553</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\CookItUniversal.Windows.exe">
       <PackagePath>CookItUniversal.Windows.exe</PackagePath>
-      <Modified>2014-11-23T23:15:27.166</Modified>
+      <Modified>2014-11-24T10:14:50.040</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\packages\MvvmLightLibs.5.0.2.0\lib\netcore451\GalaSoft.MvvmLight.dll">
       <PackagePath>GalaSoft.MvvmLight.dll</PackagePath>
@@ -76,9 +76,25 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2014-11-23T02:35:23.045</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\Assets\School_Fire_Alarm-Cullen_Card-202875844.mp3">
+      <PackagePath>Assets\School_Fire_Alarm-Cullen_Card-202875844.mp3</PackagePath>
+      <Modified>2014-11-24T03:48:00.082</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Shared\Sounds\School_Fire_Alarm-Cullen_Card-202875844.mp3">
+      <PackagePath>Sounds\School_Fire_Alarm-Cullen_Card-202875844.mp3</PackagePath>
+      <Modified>2014-11-24T03:38:21.704</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\Assets\sonnette_reveil.wav">
+      <PackagePath>Assets\sonnette_reveil.wav</PackagePath>
+      <Modified>2014-11-24T03:48:00.079</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Shared\Sounds\sonnette_reveil.wav">
+      <PackagePath>Sounds\sonnette_reveil.wav</PackagePath>
+      <Modified>2014-11-24T03:41:46.426</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-11-23T22:52:21.776</Modified>
+      <Modified>2014-11-24T09:58:11.006</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\Pages\MainPage.xbf">
       <PackagePath>Pages\MainPage.xbf</PackagePath>
@@ -86,11 +102,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\Pages\RecipeDetailsPage.xbf">
       <PackagePath>Pages\RecipeDetailsPage.xbf</PackagePath>
-      <Modified>2014-11-23T23:15:26.811</Modified>
+      <Modified>2014-11-24T09:58:11.006</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\Pages\RecipeStepPage.xbf">
       <PackagePath>Pages\RecipeStepPage.xbf</PackagePath>
-      <Modified>2014-11-23T23:15:26.811</Modified>
+      <Modified>2014-11-24T09:58:11.006</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\Pages\RecipiesPage.xbf">
       <PackagePath>Pages\RecipiesPage.xbf</PackagePath>
@@ -102,7 +118,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\Pages\SavedRecipiesPage.xbf">
       <PackagePath>Pages\SavedRecipiesPage.xbf</PackagePath>
-      <Modified>2014-11-23T23:15:26.814</Modified>
+      <Modified>2014-11-24T09:58:11.006</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\Views\HeaderView.xbf">
       <PackagePath>Views\HeaderView.xbf</PackagePath>
@@ -114,11 +130,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\CookItUniversal.Windows.xr.xml">
       <PackagePath>CookItUniversal.Windows.xr.xml</PackagePath>
-      <Modified>2014-11-23T23:15:26.788</Modified>
+      <Modified>2014-11-24T09:58:10.819</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plt3ch\Documents\GitHub\CookItGuider\CookItUniversal\CookItUniversal\CookItUniversal.Windows\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-11-23T23:15:27.320</Modified>
+      <Modified>2014-11-24T10:14:50.143</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

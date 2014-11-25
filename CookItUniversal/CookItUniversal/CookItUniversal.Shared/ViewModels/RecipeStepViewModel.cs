@@ -372,6 +372,14 @@ namespace CookItUniversal.ViewModels
             this.CurrentTimerText = startValue.ToString("0.00");
 
             double currentAngle = singleAngle;
+            if (this.CurrentTimer < 0)
+            {
+                this.CurrentTimerText = "Bon Apette!";
+                startPointInitial = new Point(150, 90);
+                this.StartPoint = startPointInitial;
+                endPointInitial = new Point(150, 90);
+                this.EndPoint = endPointInitial;
+            }
             if (this.CurrentTimer > 0)
             {
                 this.timer = new DispatcherTimer();

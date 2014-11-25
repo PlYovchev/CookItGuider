@@ -59,7 +59,7 @@ namespace CookItUniversal.Pages
             };
             timer.Interval = TimeSpan.FromSeconds(5);
             timer.Start();
-
+#if WINDOWS_PHONE_APP
             this.Accelerometer.ReadingChanged += (snd, args) =>
             {
                 if (isDeviceShaken)
@@ -84,6 +84,7 @@ namespace CookItUniversal.Pages
                     }
                 }
             };
+#endif
         }
 
         /// <summary>

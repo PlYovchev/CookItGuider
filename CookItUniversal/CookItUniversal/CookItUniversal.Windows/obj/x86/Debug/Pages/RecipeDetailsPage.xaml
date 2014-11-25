@@ -31,21 +31,25 @@
                    VerticalAlignment="Center"
                    HorizontalOffset="-100"
                    VerticalOffset="-100"
-                   IsOpen="True"
+                   IsOpen="{Binding IsEnabled}"
                    x:Name="StandardPopup">
                 <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
                 BorderThickness="2" Width="200" Height="200">
-                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel HorizontalAlignment="Stretch" 
+                                VerticalAlignment="Stretch"
+                                Background="OrangeRed">
                         <TextBlock Text="Downloading the data!" 
                                    TextWrapping="Wrap"
                                    TextAlignment="Center"
                                    FontSize="24.667" 
                                    HorizontalAlignment="Center" />
                         <ProgressRing IsActive="{Binding IsInitializing}"
+                                      Background="OrangeRed"
                                       Name="DownloadProgressRing"/>
                         <Button Content="Ok" 
-                                IsEnabled="{Binding ElementName=DownloadProgressRing,Path=!IsActive}" 
+                                Command="{Binding DismissNotification}"
+                                IsEnabled="{Binding ElementName=DownloadProgressRing,Path=IsActive,Converter={StaticResource XorConverter}}" 
                                 HorizontalAlignment="Center" />
                     </StackPanel>
                 </Border>

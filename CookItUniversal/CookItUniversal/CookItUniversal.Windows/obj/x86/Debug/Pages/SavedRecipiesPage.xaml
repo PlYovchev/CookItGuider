@@ -32,9 +32,41 @@
                       ItemsSource="{Binding SavedRecipies}"
                       ItemTemplate="{StaticResource RecipeTemplate}"
                       ItemContainerStyle="{StaticResource ListItemStyle}"
-                      SelectionMode="Multiple"
+                      SelectedItem="{Binding SelectedRecipe,Mode=TwoWay}"
                                                                  >
             </ListView>
+            <Popup HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   HorizontalOffset="-150"
+                   VerticalOffset="-100"
+                   IsOpen="{Binding IsEnabled}"
+                   x:Name="StandardPopup">
+                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="300" Height="150">
+                    <StackPanel HorizontalAlignment="Stretch" 
+                                VerticalAlignment="Stretch"
+                                Background="OrangeRed">
+                        <TextBlock Text="Do you want to delete the selected recipe?" 
+                                   TextWrapping="Wrap"
+                                   TextAlignment="Center"
+                                   FontSize="24.667" 
+                                   HorizontalAlignment="Center" />
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Bottom">
+                            <Button Content="Ok" 
+                                        Command="{Binding ConfirmAction}"
+                                        HorizontalAlignment="Center" 
+                                        VerticalAlignment="Bottom"/>
+                            <Button Content="Cancel" 
+                                        Command="{Binding DismissNotification}"
+                                        HorizontalAlignment="Center" 
+                                        VerticalAlignment="Bottom"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </Popup>
         </Grid>
         <StackPanel Grid.Row="2"
                     Background="Cyan">
@@ -47,7 +79,8 @@
                           Icon="Back" 
                                              />
             <AppBarButton Label="Delete" 
-                          Icon="Delete"/>
+                          Icon="Delete"
+                          Command="{Binding DeleteCommand}"/>
             <AppBarButton x:ConnectionId='2' Name="DetailsButton"
                           Label="Details" 
                           Icon="ShowResults"

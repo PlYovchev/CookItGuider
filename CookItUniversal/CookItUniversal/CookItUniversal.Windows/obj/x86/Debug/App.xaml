@@ -59,6 +59,7 @@
             </StackPanel>
         </DataTemplate>
         <converter:StepTitleConverter x:Key="StepTitleConverter"/>
+        <converter:XORConverter x:Key="XorConverter"/>
     </Application.Resources>
 </Application>
 
